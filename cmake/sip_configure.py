@@ -131,7 +131,7 @@ for ldflag in ldflags.split('\\ '):
 makefile._target = '"%s"' % os.path.join(output_dir, makefile._target)
 
 # Force c++11 for qt5
-makefile.extra_cxxflags.append('-std=c++11')
+makefile.extra_cxxflags.append('-std=c++11 -DROS_BUILD_SHARED_LIBS -EHa')
 
 # Generate the Makefile itself
 makefile.generate()
